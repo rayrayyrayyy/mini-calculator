@@ -25,8 +25,11 @@ def multiply():
         total = float(first_num.get()) * float(second_num.get()) # variable first_num and second_num to be follow
     except:
         messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
-        
+
 # define a function for division of numbers
+def divide():
+    try:
+        total = float(first_num.get()) / float(second_num.get()) # variable first_num and second_num to be follow
 
 # open a window using tkinter
 root_window = Tk()
