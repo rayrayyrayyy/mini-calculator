@@ -8,11 +8,15 @@ from tkinter import ttk
 # define a function for addition of numbers
 def addition():
     try:
-        result = float(first_num.get()) + float(second_num.get()) # variable first_num and second_num to be follow
+        total = float(first_num.get()) + float(second_num.get()) # variable first_num and second_num to be follow
     except:
         messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
     
 # define a function for subtraction of numbers
+def subtraction():
+    try:
+        total = float(first_num.get()) - float(second_num.get()) # variable first_num and second_num to be follow
+
 # define a function for multiplication of numbers
 # define a function for division of numbers
 
