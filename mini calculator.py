@@ -6,6 +6,10 @@ from tkinter import messagebox
 from tkinter import ttk
 
 # define a function for addition of numbers
+def addition():
+    try:
+        result = float(first_num.get()) + float(second_num.get()) # variable first_num and second_num to be follow
+    
 # define a function for subtraction of numbers
 # define a function for multiplication of numbers
 # define a function for division of numbers
