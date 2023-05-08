@@ -13,13 +13,17 @@ def addition():
         messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
     
 # define a function for subtraction of numbers
-def subtraction():
+def subtract():
     try:
         total = float(first_num.get()) - float(second_num.get()) # variable first_num and second_num to be follow
     except:
         messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
-        
+
 # define a function for multiplication of numbers
+def multiply():
+    try:
+        total = float(first_num.get()) * float(second_num.get()) # variable first_num and second_num to be follow
+
 # define a function for division of numbers
 
 # open a window using tkinter
