@@ -16,7 +16,9 @@ def addition():
 def subtraction():
     try:
         total = float(first_num.get()) - float(second_num.get()) # variable first_num and second_num to be follow
-
+    except:
+        messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
+        
 # define a function for multiplication of numbers
 # define a function for division of numbers
 
