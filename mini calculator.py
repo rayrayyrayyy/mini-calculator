@@ -41,6 +41,7 @@ root_window.config(bg = "brown")
 
 # set variables for first and second number
 first_num = Entry(root_window, font=("Segoe Script",20), justify = CENTER)
+second_num = Entry(root_window, font=("Segoe Script",20), justify = CENTER)
 
 # create buttons
 
