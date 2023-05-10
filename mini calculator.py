@@ -58,8 +58,7 @@ def addition():
 
     # result button
     result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = add)
-    result_button.place(x=225, y=80)
-    
+    result_button.place(x=225, y=80)   
 
 # define a function for subtraction of numbers
 def subtract():
@@ -109,7 +108,7 @@ def subtract():
         except:
             messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
     # entry
-    entry = Label(value_window, text = "", bg = "cyan", font=("Times", 20), justify = CENTER)
+    entry = Label(value_window, text = "", bg = "green", font=("Times", 20), justify = CENTER)
     entry.place(x=200, y=130)
 
     # result button
@@ -118,6 +117,12 @@ def subtract():
 
 # define a function for multiplication of numbers
 def multiply():
+    # create another window for addition
+    value_window = Toplevel(root_window)
+    value_window.title("MULTIPLICATION")
+    value_window.geometry("430x260")
+    value_window.config(bg = "yellow")
+
     try:
         total = float(first_num.get()) * float(second_num.get()) 
     except:
@@ -147,10 +152,10 @@ add_button.place(x=30, y=90)
 subtract_button = Button(root_window, text = "SUBTRACTION", width = 20, command = subtract)
 subtract_button.place(x=200, y=90)
 # multiplication button
-multiply_button = Button(root_window, text = "MULTIPLICATION", width = 20)
+multiply_button = Button(root_window, text = "MULTIPLICATION", width = 20, command = multiply)
 multiply_button.place(x=30, y=130)
 # division button
-division_button = Button(root_window, text = "DIVISION", width = 20)
+division_button = Button(root_window, text = "DIVISION", width = 20, command = divide)
 division_button.place(x=200, y=130)
 
 # define function to exit
