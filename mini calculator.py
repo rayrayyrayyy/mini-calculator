@@ -212,6 +212,10 @@ def divide():
     entry = Label(value_window, text = "", bg = "magenta", font=("Times", 20), justify = CENTER)
     entry.place(x=200, y=130)
 
+    # result button
+    result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = add)
+    result_button.place(x=225, y=80)   
+
 # open a window using tkinter
 root_window = Tk()
 root_window.title("MINI CALCULATOR")
