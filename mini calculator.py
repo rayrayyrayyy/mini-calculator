@@ -50,6 +50,9 @@ add_button.place(x=30, y=20)
 subtract_button = Button(root_window, text = "SUBTRACTION", width = 20)
 subtract_button.place(x=200, y=20)
 
+multiply_button = Button(root_window, text = "MULTIPLICATION", width = 20)
+multiply_button.place(x=30, y=60)
+
 
 # define a function to open another window based on the button that the user clicked
 # create entry 
