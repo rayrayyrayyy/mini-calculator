@@ -234,7 +234,7 @@ root_window.geometry("380x250")
 root_window.config(bg = "brown")
 
 # create welcoming text
-Label(root_window, text = 'Welcome user!\n what would you like to do?', bg = "brown", font = ('Calibri', 15, 'bold')).pack(pady = 10)
+Label(root_window, text = 'Welcome user!\n what would you like to do?', bg = "brown", fg = "white", font = ('Calibri', 15, 'bold')).pack(pady = 10)
 
 # create buttons
 # addition button
