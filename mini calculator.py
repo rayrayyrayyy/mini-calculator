@@ -74,7 +74,7 @@ def subtract():
     first_num.place(x=200, y=10)
 
     # add label for first number
-    note = Label(value_window, text = "Enter first number:", bg = "cyan", font=("Times", 15), justify = CENTER)
+    note = Label(value_window, text = "Enter first number:", bg = "green", font=("Times", 15), justify = CENTER)
     note.place(x=10, y=10)
 
     # set variables for second number
@@ -82,14 +82,18 @@ def subtract():
     second_num.place(x=200, y=40)
 
     # add label for second number
-    note1 = Label(value_window, text = "Enter second number:", bg = "cyan", font=("Times", 15), justify = CENTER)
+    note1 = Label(value_window, text = "Enter second number:", bg = "green", font=("Times", 15), justify = CENTER)
     note1.place(x=10, y=40)
 
     # add label for result
-    result = Label(value_window, text = "Result\t= ", bg = "cyan", font=("Times", 20), justify = CENTER)
+    result = Label(value_window, text = "Result\t= ", bg = "green", font=("Times", 20), justify = CENTER)
     result.place(x=50, y=130)
 
-    def subtract():
+    # add back button
+    back_button = Button(value_window, text = "BACK", width = 20, command = value_window.destroy)
+    back_button.place(x=225, y=200)
+
+    def sub():
         try:
             total = float(first_num.get()) - float(second_num.get()) 
             entry.config(text = total)
@@ -100,7 +104,7 @@ def subtract():
     entry.place(x=200, y=130)
 
     # result button
-    result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = subtract)
+    result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = sub)
     result_button.place(x=225, y=80)
 
 # define a function for multiplication of numbers
@@ -131,7 +135,7 @@ Label(root_window, text = 'Welcome user!\n what would you like to do?', bg = "br
 add_button = Button(root_window, text = "ADDITION", width = 20, command = addition)
 add_button.place(x=30, y=90)
 # subtraction button
-subtract_button = Button(root_window, text = "SUBTRACTION", width = 20)
+subtract_button = Button(root_window, text = "SUBTRACTION", width = 20, command = subtract)
 subtract_button.place(x=200, y=90)
 # multiplication button
 multiply_button = Button(root_window, text = "MULTIPLICATION", width = 20)
