@@ -202,10 +202,15 @@ def divide():
     back_button = Button(value_window, text = "BACK", width = 20, command = value_window.destroy)
     back_button.place(x=225, y=200)
 
-    try:
-        total = float(first_num.get()) / float(second_num.get()) 
-    except:
-        messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
+    def divide_1():
+        try:
+            total = float(first_num.get()) / float(second_num.get()) 
+            entry.config(text = total)
+        except:
+            messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
+    # entry
+    entry = Label(value_window, text = "", bg = "magenta", font=("Times", 20), justify = CENTER)
+    entry.place(x=200, y=130)
 
 # open a window using tkinter
 root_window = Tk()
