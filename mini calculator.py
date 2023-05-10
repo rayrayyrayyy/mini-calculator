@@ -68,7 +68,11 @@ def subtract():
     value_window.title("SUBTRACTION")
     value_window.geometry("430x260")
     value_window.config(bg = "green")
-    
+
+    # set variables for first number
+    first_num = Entry(value_window, font=("Segoe Script",10), justify = CENTER)
+    first_num.place(x=200, y=10)
+
     try:
         total = float(first_num.get()) - float(second_num.get()) 
     except:
