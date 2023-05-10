@@ -8,7 +8,7 @@ from tkinter import ttk
 # define a function for addition of numbers
 def addition():
     # create another window
-    value_window = Tk()
+    value_window = Toplevel(root_window)
     value_window.title("MINI CALCULATOR")
     value_window.geometry("500x300")
     value_window.config(bg = "cyan")
@@ -29,11 +29,18 @@ def addition():
     note1 = Label(value_window, text = "Enter second number:", font=("Times", 15), justify = CENTER)
     note1.place(x=10, y=40)
 
-    result = Label(value_window, text = "", font=("Times", 15), justify = CENTER)
-    result.place(x=200, y=80)
+    entry = Label(value_window, text = "", font=("Times", 15), justify = CENTER)
+    entry.place(x=200, y=80)
+
+    def final_value():
+            v = total.get()
+            entry.config(text = v)
+
+    result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = final_value)
+    result_button.place(x=250, y=80)
+
     try:
-        total = float(first_num.get()) + float(second_num.get()) 
-        result.config(text = total)
+        total = float(first_num.get()) + float(second_num.get())
 
     except:
         messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
