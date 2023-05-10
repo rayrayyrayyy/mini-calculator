@@ -73,6 +73,10 @@ def subtract():
     first_num = Entry(value_window, font=("Segoe Script",10), justify = CENTER)
     first_num.place(x=200, y=10)
 
+    # add label for first number
+    note = Label(value_window, text = "Enter first number:", bg = "cyan", font=("Times", 15), justify = CENTER)
+    note.place(x=10, y=10)
+
     try:
         total = float(first_num.get()) - float(second_num.get()) 
     except:
