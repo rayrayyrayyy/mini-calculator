@@ -202,6 +202,15 @@ def divide():
     back_button = Button(value_window, text = "BACK", width = 20, command = value_window.destroy)
     back_button.place(x=225, y=200)
 
+    # define clear
+    def clear():
+        first_num.delete(0, END)
+        second_num.delete(0, END)
+
+    # add clear button
+    clear_button = Button(value_window, text = "CLEAR", width = 20, command = clear)
+    clear_button.place(x=50, y=200)
+
     def divide_1():
         try:
             total = float(first_num.get()) / float(second_num.get()) 
