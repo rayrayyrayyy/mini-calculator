@@ -117,7 +117,7 @@ def subtract():
 
 # define a function for multiplication of numbers
 def multiply():
-    # create another window for addition
+    # create another window for multiplication
     value_window = Toplevel(root_window)
     value_window.title("MULTIPLICATION")
     value_window.geometry("430x260")
@@ -172,6 +172,12 @@ def multiply():
 
 # define a function for division of numbers
 def divide():
+    # create another window for division
+    value_window = Toplevel(root_window)
+    value_window.title("DIVISION")
+    value_window.geometry("430x260")
+    value_window.config(bg = "magenta")
+
     try:
         total = float(first_num.get()) / float(second_num.get()) 
     except:
