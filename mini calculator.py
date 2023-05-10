@@ -194,6 +194,10 @@ def divide():
     note1 = Label(value_window, text = "Enter second number:", bg = "magenta", font=("Times", 15), justify = CENTER)
     note1.place(x=10, y=40)
 
+    # add label for result
+    result = Label(value_window, text = "Result\t= ", bg = "magenta", font=("Times", 20), justify = CENTER)
+    result.place(x=50, y=130)
+
     try:
         total = float(first_num.get()) / float(second_num.get()) 
     except:
