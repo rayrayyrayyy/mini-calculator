@@ -7,7 +7,7 @@ from tkinter import ttk
 
 # define a function for addition of numbers
 def addition():
-    # create another window
+    # create another window for addition
     value_window = Toplevel(root_window)
     value_window.title("ADDITION")
     value_window.geometry("430x260")
@@ -60,8 +60,15 @@ def addition():
     result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = add)
     result_button.place(x=225, y=80)
     
+
 # define a function for subtraction of numbers
 def subtract():
+    # create another window for subtraction
+    value_window = Toplevel(root_window)
+    value_window.title("SUBTRACTION")
+    value_window.geometry("430x260")
+    value_window.config(bg = "green")
+    
     try:
         total = float(first_num.get()) - float(second_num.get()) 
     except:
