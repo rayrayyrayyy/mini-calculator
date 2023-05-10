@@ -222,7 +222,7 @@ def divide():
     entry.place(x=200, y=130)
 
     # result button
-    result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = add)
+    result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = divide_1)
     result_button.place(x=225, y=80)   
 
 # open a window using tkinter
