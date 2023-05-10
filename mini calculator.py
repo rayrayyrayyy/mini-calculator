@@ -33,6 +33,15 @@ def divide():
     except:
         messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
 
+# define a function to open another window based on the button that the user clicked
+def get_values():
+    value_window = Tk()
+    value_window.title("MINI CALCULATOR")
+    value_window.geometry("500x300")
+    value_window.config(bg = "cyan")
+
+
+
 # open a window using tkinter
 root_window = Tk()
 root_window.title("MINI CALCULATOR")
@@ -44,7 +53,7 @@ first_num = Entry(root_window, font=("Segoe Script",20), justify = CENTER)
 second_num = Entry(root_window, font=("Segoe Script",20), justify = CENTER)
 
 # create buttons
-add_button = Button(root_window, text = "ADDITION", width = 20)
+add_button = Button(root_window, text = "ADDITION", width = 20, command = addition)
 add_button.place(x=30, y=20)
 
 subtract_button = Button(root_window, text = "SUBTRACTION", width = 20)
@@ -56,8 +65,6 @@ multiply_button.place(x=30, y=60)
 division_button = Button(root_window, text = "DIVISION", width = 20)
 division_button.place(x=200, y=60)
 
-
-# define a function to open another window based on the button that the user clicked
 # create entry 
 # create exit button
 
