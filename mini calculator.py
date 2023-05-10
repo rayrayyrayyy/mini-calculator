@@ -39,6 +39,9 @@ root_window.title("MINI CALCULATOR")
 root_window.geometry("500x500")
 root_window.config(bg = "brown")
 
+# set variables for first and second number
+first_num = Entry(root_window, font=("Segoe Script",20), justify = CENTER)
+
 # create buttons
 
 # define a function to open another window based on the button that the user clicked
