@@ -10,7 +10,7 @@ def addition():
     # create another window
     value_window = Toplevel(root_window)
     value_window.title("MINI CALCULATOR")
-    value_window.geometry("500x300")
+    value_window.geometry("450x300")
     value_window.config(bg = "cyan")
 
     # set variables for first number
@@ -18,7 +18,7 @@ def addition():
     first_num.place(x=200, y=10)
 
     # add label for first number
-    note = Label(value_window, text = "Enter first number:", font=("Times", 15), justify = CENTER)
+    note = Label(value_window, text = "Enter first number:", bg = "cyan", font=("Times", 15), justify = CENTER)
     note.place(x=10, y=10)
 
     # set variables for second number
@@ -26,8 +26,12 @@ def addition():
     second_num.place(x=200, y=40)
 
     # add label for second number
-    note1 = Label(value_window, text = "Enter second number:", font=("Times", 15), justify = CENTER)
+    note1 = Label(value_window, text = "Enter second number:", bg = "cyan", font=("Times", 15), justify = CENTER)
     note1.place(x=10, y=40)
+
+    # add label for result
+    result = Label(value_window, text = "Result\t= ", bg = "cyan", font=("Times", 20), justify = CENTER)
+    result.place(x=50, y=130)
 
     def add():
         try:
@@ -36,11 +40,11 @@ def addition():
         except:
             messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
 
-    entry = Label(value_window, text = "", font=("Times", 15), justify = CENTER)
-    entry.place(x=200, y=80)
+    entry = Label(value_window, text = "", bg = "cyan", font=("Times", 20), justify = CENTER)
+    entry.place(x=200, y=130)
 
     result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = add)
-    result_button.place(x=250, y=80)
+    result_button.place(x=225, y=80)
     
 # define a function for subtraction of numbers
 def subtract():
