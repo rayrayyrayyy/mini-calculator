@@ -33,6 +33,10 @@ def addition():
     result = Label(value_window, text = "Result\t= ", bg = "cyan", font=("Times", 20), justify = CENTER)
     result.place(x=50, y=130)
 
+    # add back button
+    back_button = Button(value_window, text = "BACK", width = 20, command = value_window.destroy)
+    back_button.place(x=225, y=200)
+
     def add():
         try:
             total = float(first_num.get()) + float(second_num.get())
