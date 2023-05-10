@@ -13,16 +13,21 @@ def addition():
     value_window.geometry("500x300")
     value_window.config(bg = "cyan")
 
-    # set variables for first and second number
+    # set variables for first number
     first_num = Entry(value_window, font=("Segoe Script",10), justify = CENTER)
     first_num.place(x=200, y=10)
 
-    # add label 
-    note = Label(value_window, text = "Enter a number:", font=("Times", 15), justify = CENTER)
+    # add label for first number
+    note = Label(value_window, text = "Enter first number:", font=("Times", 15), justify = CENTER)
     note.place(x=10, y=10)
 
+    # set variables for second number
     second_num = Entry(value_window, font=("Segoe Script",10), justify = CENTER)
     second_num.place(x=200, y=40)
+
+    # add label for second number
+    note1 = Label(value_window, text = "Enter second number:", font=("Times", 15), justify = CENTER)
+    note1.place(x=10, y=40)
 
     result = Label(value_window, text = "", font=("Times", 15), justify = CENTER)
     result.place(x=200, y=80)
