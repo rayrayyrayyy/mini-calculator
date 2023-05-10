@@ -51,7 +51,7 @@ def addition():
             total = float(first_num.get()) + float(second_num.get())
             entry.config(text = total)
         except:
-            messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
+            messagebox.showerror("ERROR", "ERROR! Invalid input!\n Please enter numbers only.")
     # entry
     entry = Label(value_window, text = "", bg = "cyan", font=("Times", 20), justify = CENTER)
     entry.place(x=200, y=130)
@@ -106,7 +106,7 @@ def subtract():
             total = float(first_num.get()) - float(second_num.get()) 
             entry.config(text = total)
         except:
-            messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
+            messagebox.showerror("ERROR", "ERROR! Invalid input!\n Please enter numbers only.")
     # entry
     entry = Label(value_window, text = "", bg = "green", font=("Times", 20), justify = CENTER)
     entry.place(x=200, y=130)
@@ -161,7 +161,7 @@ def multiply():
             total = float(first_num.get()) * float(second_num.get()) 
             entry.config(text = total)
         except:
-            messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
+            messagebox.showerror("ERROR", "ERROR! Invalid input!\n Please enter numbers only.")
     # entry
     entry = Label(value_window, text = "", bg = "yellow", font=("Times", 20), justify = CENTER)
     entry.place(x=200, y=130)
@@ -215,8 +215,10 @@ def divide():
         try:
             total = float(first_num.get()) / float(second_num.get()) 
             entry.config(text = total)
+        except ZeroDivisionError:
+            messagebox.showerror("ERROR", "Error: Division by zero is not allowed!!!")
         except:
-            messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
+            messagebox.showerror("ERROR", "ERROR! Invalid input!\n Please enter numbers only.")
     # entry
     entry = Label(value_window, text = "", bg = "magenta", font=("Times", 20), justify = CENTER)
     entry.place(x=200, y=130)
