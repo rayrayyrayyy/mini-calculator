@@ -66,22 +66,26 @@ def divide():
 # open a window using tkinter
 root_window = Tk()
 root_window.title("MINI CALCULATOR")
-root_window.geometry("385x300")
+root_window.geometry("385x250")
 root_window.config(bg = "brown")
+
+# create welcoming text
+Label(root_window, text = 'Welcome user!\n what would you like to do?', bg = "brown", font = ('Calibri', 15, 'bold')).pack(pady = 10)
 
 # create buttons
 # addition button
 add_button = Button(root_window, text = "ADDITION", width = 20, command = addition)
-add_button.place(x=30, y=20)
+add_button.place(x=30, y=90)
 # subtraction button
 subtract_button = Button(root_window, text = "SUBTRACTION", width = 20)
-subtract_button.place(x=200, y=20)
+subtract_button.place(x=200, y=90)
 # multiplication button
 multiply_button = Button(root_window, text = "MULTIPLICATION", width = 20)
-multiply_button.place(x=30, y=60)
+multiply_button.place(x=30, y=130)
 # division button
 division_button = Button(root_window, text = "DIVISION", width = 20)
-division_button.place(x=200, y=60)
+division_button.place(x=200, y=130)
+
 
 # mainloop
 root_window.mainloop()
