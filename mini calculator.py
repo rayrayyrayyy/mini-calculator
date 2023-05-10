@@ -37,6 +37,10 @@ def addition():
     back_button = Button(value_window, text = "BACK", width = 20, command = value_window.destroy)
     back_button.place(x=225, y=200)
 
+    # add clear button
+    clear_button = Button(value_window, text = "CLEAR", width = 20, command = clear)
+    clear_button.place(x=50, y=200)
+
     def add():
         try:
             total = float(first_num.get()) + float(second_num.get())
@@ -47,6 +51,7 @@ def addition():
     entry = Label(value_window, text = "", bg = "cyan", font=("Times", 20), justify = CENTER)
     entry.place(x=200, y=130)
 
+    # result button
     result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = add)
     result_button.place(x=225, y=80)
     
