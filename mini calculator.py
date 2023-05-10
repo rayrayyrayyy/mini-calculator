@@ -150,8 +150,12 @@ def multiply():
         except:
             messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
     # entry
-    entry = Label(value_window, text = "", bg = "cyan", font=("Times", 20), justify = CENTER)
+    entry = Label(value_window, text = "", bg = "yellow", font=("Times", 20), justify = CENTER)
     entry.place(x=200, y=130)
+
+     # result button
+    result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = add)
+    result_button.place(x=225, y=80)
 
 # define a function for division of numbers
 def divide():
