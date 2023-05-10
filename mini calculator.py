@@ -178,6 +178,14 @@ def divide():
     value_window.geometry("430x260")
     value_window.config(bg = "magenta")
 
+    # set variables for first number
+    first_num = Entry(value_window, font=("Segoe Script",10), justify = CENTER)
+    first_num.place(x=200, y=10)
+
+    # add label for first number
+    note = Label(value_window, text = "Enter first number:", bg = "magenta", font=("Times", 15), justify = CENTER)
+    note.place(x=10, y=10)
+
     try:
         total = float(first_num.get()) / float(second_num.get()) 
     except:
