@@ -36,7 +36,7 @@ def divide():
 # open a window using tkinter
 root_window = Tk()
 root_window.title("MINI CALCULATOR")
-root_window.geometry("500x500")
+root_window.geometry("385x300")
 root_window.config(bg = "brown")
 
 # set variables for first and second number
@@ -45,7 +45,10 @@ second_num = Entry(root_window, font=("Segoe Script",20), justify = CENTER)
 
 # create buttons
 add_button = Button(root_window, text = "ADDITION", width = 20)
-add_button.place(x=20, y=20)
+add_button.place(x=30, y=20)
+
+subtract_button = Button(root_window, text = "SUBTRACTION", width = 20)
+subtract_button.place(x=200, y=20)
 
 
 # define a function to open another window based on the button that the user clicked
