@@ -140,8 +140,12 @@ def multiply():
     note1.place(x=10, y=40)
 
     # add label for result
-    result = Label(value_window, text = "Result\t= ", bg = "cyan", font=("Times", 20), justify = CENTER)
+    result = Label(value_window, text = "Result\t= ", bg = "yellow", font=("Times", 20), justify = CENTER)
     result.place(x=50, y=130)
+
+    # add back button
+    back_button = Button(value_window, text = "BACK", width = 20, command = value_window.destroy)
+    back_button.place(x=225, y=200)
 
     def multiply_1():
         try:
@@ -154,7 +158,7 @@ def multiply():
     entry.place(x=200, y=130)
 
      # result button
-    result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = add)
+    result_button = Button(value_window, text = "SHOW RESULT", width = 20, command = multiply_1)
     result_button.place(x=225, y=80)
 
 # define a function for division of numbers
