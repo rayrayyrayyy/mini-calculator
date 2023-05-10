@@ -9,8 +9,8 @@ from tkinter import ttk
 def addition():
     # create another window
     value_window = Toplevel(root_window)
-    value_window.title("MINI CALCULATOR")
-    value_window.geometry("450x300")
+    value_window.title("ADDITION")
+    value_window.geometry("430x260")
     value_window.config(bg = "cyan")
 
     # set variables for first number
