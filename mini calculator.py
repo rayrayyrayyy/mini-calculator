@@ -86,8 +86,12 @@ multiply_button.place(x=30, y=130)
 division_button = Button(root_window, text = "DIVISION", width = 20)
 division_button.place(x=200, y=130)
 
+# define function to exit
+def exit_program():
+    messagebox.askyesno("NOTICE", "You're about to exit the program?")
+    root_window.quit()
 # exit button
-exit_button = Button(root_window, text = "EXIT", width = 20)
+exit_button = Button(root_window, text = "EXIT", width = 20, command = exit_program)
 exit_button.place(x=110, y=180)
 
 # mainloop
