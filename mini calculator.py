@@ -44,6 +44,9 @@ first_num = Entry(root_window, font=("Segoe Script",20), justify = CENTER)
 second_num = Entry(root_window, font=("Segoe Script",20), justify = CENTER)
 
 # create buttons
+add_button = Button(root_window, text = "ADDITION", width = 20)
+add_button.place(x=20, y=20)
+
 
 # define a function to open another window based on the button that the user clicked
 # create entry 
