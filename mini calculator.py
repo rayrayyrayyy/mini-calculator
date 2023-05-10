@@ -143,10 +143,15 @@ def multiply():
     result = Label(value_window, text = "Result\t= ", bg = "cyan", font=("Times", 20), justify = CENTER)
     result.place(x=50, y=130)
 
-    try:
-        total = float(first_num.get()) * float(second_num.get()) 
-    except:
-        messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
+    def multiply_1():
+        try:
+            total = float(first_num.get()) * float(second_num.get()) 
+            entry.config(text = total)
+        except:
+            messagebox.showerror("Showerror", "ERROR! Invalid input!\n Please enter numbers only.")
+    # entry
+    entry = Label(value_window, text = "", bg = "cyan", font=("Times", 20), justify = CENTER)
+    entry.place(x=200, y=130)
 
 # define a function for division of numbers
 def divide():
